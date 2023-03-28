@@ -1,13 +1,13 @@
 #include "point.h"
 
-Point::Point(double valueX, double valueY)
+point::point(double value_x, double value_y)
 {
-    this -> x = valueX;
-    this -> y = valueY;
+    this -> x = value_x;
+    this -> y = value_y;
 }
 
 
-void Point::Print()
+void point::print()
 {
     std::cout << "(" << x << ", " << y << ")\n";
 }
