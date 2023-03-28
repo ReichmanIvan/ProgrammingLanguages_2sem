@@ -1,12 +1,12 @@
 #pragma once
 #include <iostream>
 
-class Point 
+struct point 
 {
     public:
-        Point();
+        point();
         double x;
         double y;
-        Point(double valueX, double valueY);
-        void Print();
+        point(double value_x, double value_y);
+        void print();
 };
