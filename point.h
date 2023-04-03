@@ -1,12 +1,16 @@
 #pragma once
 #include <iostream>
-
-struct point 
+namespace miit::line_lib
 {
+    class point
+    {
     public:
-        point();
+        point(double value_x = 0.0, double value_y = 0.0);
+        double get_x() const;
+        double get_y() const;
+    private:
         double x;
         double y;
-        point(double value_x, double value_y);
-        void print();
-};
+    };
+}
+
