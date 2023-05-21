@@ -5,12 +5,12 @@ namespace miit::line_lib
     class point
     {
     public:
-        point(double value_x = 0.0, double value_y = 0.0);
+        point(const double value_x = 0.0, const double value_y = 0.0);
         double get_x() const;
         double get_y() const;
+        friend bool operator == (const point& lha, const point& rha);
     private:
         double x;
         double y;
     };
 }
-
