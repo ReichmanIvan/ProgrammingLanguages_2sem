@@ -1,6 +1,7 @@
 #include "color.h"
+using namespace line_col;
 
-miit::line_lib::color::color(const int red, const int green, const int blue)
+color::color(const int red, const int green, const int blue)
 	:red(red), green(green), blue(blue)
 {
 	if (red < 0 || red > 255 || green < 0 || green > 255 || blue < 0 || blue > 255)
@@ -9,17 +10,17 @@ miit::line_lib::color::color(const int red, const int green, const int blue)
 	}
 }
 
-int miit::line_lib::color::get_red() const
+int color::get_red() const
 {
 	return this->red;
 }
 
-int miit::line_lib::color::get_green() const
+int color::get_green() const
 {
 	return this->green;
 }
 
-int miit::line_lib::color::get_blue() const
+int color::get_blue() const
 {
 	return this->blue;
 }
