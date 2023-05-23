@@ -1,7 +1,7 @@
 #include "line.h"
+using namespace line_lib;
 
-miit::line_lib::line::line(const miit::line_lib::point& point_1, const miit::line_lib::point& point_2, const miit::line_lib::color& color)
-	:point_1(point_1), point_2(point_2), color(color)
+line::line(const point point_1, const point point_2, const line_col::color color)
 {
 	if (point_1 == point_2)
 	{
@@ -9,17 +9,17 @@ miit::line_lib::line::line(const miit::line_lib::point& point_1, const miit::lin
 	}
 }
 
-miit::line_lib::point miit::line_lib::line::get_point_1() const
+point line::get_point_1() const
 {
 	return this->point_1;
 }
 
-miit::line_lib::point miit::line_lib::line::get_point_2() const
+point line::get_point_2() const
 {
 	return this->point_2;
 }
 
-miit::line_lib::color miit::line_lib::line::get_color() const
+line_col::color line::get_color() const
 {
 	return this->color;
 }
