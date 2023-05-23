@@ -1,6 +1,8 @@
 #pragma once
 #include <iostream>
-namespace miit::line_lib
+#include "help_math.h"
+
+namespace line_lib
 {
     class point
     {
