@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
-namespace miit::line_lib
+#include "point.h"
+namespace line_col 
 {
     class color
     {
@@ -15,3 +16,5 @@ namespace miit::line_lib
         int blue;
     };
 }
+
+
