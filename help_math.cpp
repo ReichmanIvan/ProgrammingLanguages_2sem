@@ -1,4 +1,4 @@
-#include "help_mathr.h"
+#include "help_math.h"
 #include <cmath>
 
 bool miit::help_math::is_double_equal(const double value_1, const double value_2, const double precision)
