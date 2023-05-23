@@ -2,18 +2,18 @@
 #include <iostream>
 #include "point.h"
 #include "color.h"
-namespace miit::line_lib
-{
+using namespace line_lib;
+
     class line
     {
     public:
-        line(const point& point_1, const point& point_2, const color& color);
+        line(const point point_1, const point point_2, const line_col::color color);
         point get_point_1() const;
         point get_point_2() const;
-        color get_color() const;
+        line_col::color get_color() const;
     private:
         point point_1;
         point point_2;
-        color color;
+        line_col::color color;
     };
-}
+
