@@ -1,5 +1,6 @@
 #include "point.h"
 #include "help_math.h"
+#include <sstream>
 using namespace line_lib;
 
 point::point(const double value_x, const double value_y)
@@ -7,17 +8,21 @@ point::point(const double value_x, const double value_y)
 {
 }
 
-double point::get_x() const
-{
-	return this->x;
-}
-
-double point::get_y() const
-{
-	return this->y;
-}
-
 bool line_lib::operator==(const point& lha, const point& rha)
 {
-	return (miit::help_math::is_double_equal(lha.get_x(), rha.get_x()) && miit::help_math::is_double_equal(lha.get_y(), rha.get_y()));
+	return (miit::help_math::is_double_equal(lha.x, rha.x) && miit::help_math::is_double_equal(lha.y, rha.y));
+}
+
+std::ostream& line_lib::operator<<(std::ostream& out, const point& point)
+{
+	out << "Point(" << point.x << ", " << point.y << ")";
+	return out;
+}
+
+std::wstring ToString(point* point) 
+{
+	std::wstringstream buffer;
+	buffer << L"{ ";
+	buffer << point->x << L" " << point->y << L" }";
+	return buffer.str();
 }
