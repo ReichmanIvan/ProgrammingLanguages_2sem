@@ -24,3 +24,9 @@ int color::get_blue() const
 {
 	return this->blue;
 }
+
+std::ostream& line_col::operator<<(std::ostream& out, const color& color)
+{
+	out << "color(" << color.get_red() << ", " << color.get_green() << "," << color.get_blue() << ")";
+	return out;
+}
