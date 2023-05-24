@@ -10,11 +10,13 @@ namespace line_col
         int get_red() const;
         int get_green() const;
         int get_blue() const;
+        friend std::ostream& operator<< (std::ostream& out, const color& color);
     private:
         int red;
         int green;
         int blue;
     };
 }
+
 
 
