@@ -1,34 +1,21 @@
-#include "color.h"
-using namespace line_col;
-
-color::color(const int red, const int green, const int blue)
-	:red(red), green(green), blue(blue)
+#pragma once
+#include <iostream>
+#include "point.h"
+namespace line_col 
 {
-	if (red < 0 || red > 255 || green < 0 || green > 255 || blue < 0 || blue > 255)
-	{
-		throw std::out_of_range("Not correct color");
-	}
-}
-
-int color::get_red() const
-{
-	return this->red;
-}
-
-int color::get_green() const
-{
-	return this->green;
-}
-
-int color::get_blue() const
-{
-	return this->blue;
-}
-
-std::ostream& line_col::operator<<(std::ostream& out, const color& color)
-{
-	out << "color(" << color.get_red() << ", " << color.get_green() << "," << color.get_blue() << ")";
-	return out;
+    class color
+    {
+    public:
+        color(const int red = 0, const int green = 0, const int blue = 0);
+        int get_red() const;
+        int get_green() const;
+        int get_blue() const;
+        friend std::ostream& operator<< (std::ostream& out, const color& color);
+    private:
+        int red;
+        int green;
+        int blue;
+    };
 }
 
 
