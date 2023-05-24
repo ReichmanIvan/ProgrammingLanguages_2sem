@@ -11,6 +11,7 @@ using namespace line_lib;
         point get_point_1() const;
         point get_point_2() const;
         line_col::color get_color() const;
+        friend std::ostream& operator<< (std::ostream& out, const line& line);
     private:
         point point_1;
         point point_2;
