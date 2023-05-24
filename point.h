@@ -4,15 +4,13 @@
 
 namespace line_lib
 {
-    class point
+    struct point
     {
-    public:
         point(const double value_x = 0.0, const double value_y = 0.0);
-        double get_x() const;
-        double get_y() const;
         friend bool operator == (const point& lha, const point& rha);
-    private:
+        friend std::ostream& operator<< (std::ostream& out, const point& point);
         double x;
         double y;
     };
 }
+
