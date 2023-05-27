@@ -46,7 +46,18 @@ public:
     friend std::ostream& operator<< (std::ostream& out, const line& line);
 
 private:
-    point point_1; /**< Первая точка линии. */
-    point point_2; /**< Вторая точка линии. */
-    line_col::color color; /**< Цвет линии. */
+    /**
+    *\Первая точка линии. 
+    */
+    point point_1;
+    
+    /**
+    *\Первая точка линии. 
+    */
+    point point_2; 
+    
+    /**
+    *\Цвет линии. 
+    */
+    line_col::color color;
 };
